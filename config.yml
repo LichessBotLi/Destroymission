@@ -6,68 +6,16 @@ engines:
     name: "stockfish-ubuntu-x86-64-bmi2"
     ponder: false
     silence_stderr: false
-    move_overhead_multiplier: 99999.5
+    move_overhead_multiplier: 100.0
     uci_options:
       Threads: 1
-      Hash: 3
-      Move Overhead: 15000
+      Hash: 2
+      Move Overhead: 900
+      UCI_Elo: 890
     limits:
       # time: 20.0
       # depth: 50
       # nodes: 8000000
-
-  variants:
-    dir: "./engines"
-    name: "fairy-stockfish_x86-64-bmi2"
-    ponder: false
-    silence_stderr: false
-    move_overhead_multiplier: 25.0
-    uci_options:
-      Threads: 4
-      Hash: 102
-      Move Overhead: 60
-      EvalFile: "horde-28173ddccabe.nnue:racingkings-636b95f085e3.nnue:crazyhouse-8ebf84784ad2.nnue:kingofthehill-978b86d0e6a4.nnue:antichess-dd3cbe53cd4e.nnue:atomic-2cf13ff256cc.nnue:3check-cb5f517c228b.nnue"
-    limits:
-     # time: 20.0
-      #depth: 50
-    #  nodes: 5000000
-  humans:
-    dir: "./engines"
-    name: "fairy-stockfish_x86-64-bmi2"
-    ponder: false
-    silence_stderr: false
-    move_overhead_multiplier: 10.0
-    uci_options:
-      Threads: 4
-      Hash: 10
-      Move Overhead: 225
-    limits:
-     # time: 20.0
-      #depth: 50
-    #  nodes: 5000000
-  bullet:
-    dir: "./engines"
-    name: "stockfish-ubuntu-x86-64-avx2"
-    ponder: true
-    silence_stderr: false
-    move_overhead_multiplier: 15020398.0
-    uci_options:
-       Threads: 1
-       Hash: 20
-       Move Overhead: 13000
-    limits: 
-  chess960:
-    dir: "./engines"
-    name: "stockfish-ubuntu-x86-64-avx2"
-    ponder: true
-    silence_stderr: false
-    move_overhead_multiplier: 20.0
-    uci_options:
-       Threads: 4
-       Hash: 256
-       Move Overhead: 100
-    limits: 
-
 
 syzygy:
   standard:
