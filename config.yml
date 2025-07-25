@@ -4,13 +4,13 @@ engines:
   standard:
     dir: "./engines"
     name: "stockfish-ubuntu-x86-64-bmi2"
-    ponder: true
+    ponder: false
     silence_stderr: false
-    move_overhead_multiplier: 6.5
+    move_overhead_multiplier: 99999.5
     uci_options:
-      Threads: 4
-      Hash: 3212
-      Move Overhead: 150
+      Threads: 1
+      Hash: 3
+      Move Overhead: 15000
     limits:
       # time: 20.0
       # depth: 50
@@ -50,11 +50,11 @@ engines:
     name: "stockfish-ubuntu-x86-64-avx2"
     ponder: true
     silence_stderr: false
-    move_overhead_multiplier: 15.0
+    move_overhead_multiplier: 15020398.0
     uci_options:
-       Threads: 4
-       Hash: 2048
-       Move Overhead: 130
+       Threads: 1
+       Hash: 20
+       Move Overhead: 13000
     limits: 
   chess960:
     dir: "./engines"
